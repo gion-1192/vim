@@ -1,0 +1,25 @@
+alias cddc="cd /Users/taka/Documents"
+
+alias vvim="vim ~/.vimrc"
+alias vba="vim ~/.bash_vim"
+alias uba="source ~/.bash_profile"
+
+
+alias giti="git init"
+alias gita="git add"
+alias gitc="git commit"
+alias gitr="git remote add origin"
+alias gitp="git push" 
+
+function mkcd(){
+	mkdir $1;
+	cd $1;
+}
+alias mkcd=mkcd
+
+function rmf(){
+	rm -rf $1
+}
+alias rmf=rmf
+
+
