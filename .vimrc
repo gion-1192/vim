@@ -11,7 +11,6 @@ map <C-n> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 noremap <C-r> :!ruby %
 
-test
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
