@@ -2,14 +2,28 @@ set number
 set mouse=a
 autocmd vimenter * NERDTree
 hi Comment ctermfg=yellow
-inoremap <C-e> <Esc>$a
+set clipboard+=unnamed
 
+inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^a
+inoremap jj <Esc>
+
+" open-browser.vim
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+nmap go <Plug>(openbrowser-open)
+
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^a
 map <C-n> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 noremap <C-r> :!ruby %
+
+noremap <SPACE>q :q
+noremap <SPACE>w :w
+noremap <SPACE>qw :qw
 
 "dein Scripts-----------------------------
 if &compatible
@@ -36,7 +50,8 @@ if dein#load_state('/Users/taka/.cache/dein')
   call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-endwise')
   call dein#add('cohama/lexima.vim')
-
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('tyru/open-browser.vim')
   " Required:
   call dein#end()
   call dein#save_state()
