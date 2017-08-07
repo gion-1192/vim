@@ -3,6 +3,8 @@ set mouse=a
 autocmd vimenter * NERDTree
 hi Comment ctermfg=yellow
 set clipboard+=unnamed
+set tabstop=2
+set shiftwidth=2
 
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^a
@@ -20,6 +22,11 @@ noremap <C-a> <Esc>^a
 map <C-n> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 noremap <C-r> :!ruby %
+noremap <C-c> :!rake log:clear
+noremap <C-l> :e!
+noremap <SPACE>ro :Einitializer
+noremap <SPACE>cn :Econtroller
+noremap <SPACE>ge :Elib
 
 noremap <SPACE>q :q
 noremap <SPACE>w :w
@@ -92,6 +99,9 @@ call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('rb', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('/', 'cyan', 'none', 'cyan', '#151515')
+
+
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
