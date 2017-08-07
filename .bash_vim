@@ -29,7 +29,10 @@ alias gitp="git push"
 function gitcnf() {
 	cd ~/
 	git add .vimrc
-	git add .bash_vim
+	git add .bash_vim	
+	git commit -m "$1 [`date "+%Y%m%d_%H%M%S"`]"
+	git push -u origin master
+}
 }
 alias gitcnf=gitcnf
 
