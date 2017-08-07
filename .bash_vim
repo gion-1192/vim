@@ -1,21 +1,43 @@
-alias cddc="cd /Users/taka/Documents"
+function cddcd() {
+	str1=/
+ 	for i; do
+		str1="${str1}${i}/";
+	done
+	cd "/Users/taka/Documents${str1}";
+}
+alias cddc=cddcd
 
 alias vvim="vim ~/.vimrc"
 alias vba="vim ~/.bash_vim"
 alias uba="source ~/.bash_profile"
-
+alias bi="bundle install"
+alias res="redis-server /usr/local/etc/redis.conf"
+alias res-c="redis-cli"
+alias vnginx="vim /usr/local/etc/nginx/nginx.conf"
 
 alias giti="git init"
 alias gita="git add"
-alias gitc="git commit"
+
+function gitcm(){
+	git commit -m "$1 [`date "+%Y%m%d_%H%M%S"`]"
+}
+alias gitcm=gitcm
+
 alias gitr="git remote add origin"
-alias gitp="git push" 
+alias gitp="git push"
+
+function gitcnf() {
+	cd "~/"
+	git add ".vimrc"
+	git add ".bash_vim"
+}
 
 function mkcd(){
 	mkdir $1;
 	cd $1;
 }
 alias mkcd=mkcd
+
 
 function rmf(){
 	rm -rf $1
