@@ -27,10 +27,11 @@ alias gitr="git remote add origin"
 alias gitp="git push"
 
 function gitcnf() {
-	cd "~/"
-	git add ".vimrc"
-	git add ".bash_vim"
+	cd ~/
+	git add .vimrc
+	git add .bash_vim
 }
+alias gitcnf=gitcnf
 
 function mkcd(){
 	mkdir $1;
