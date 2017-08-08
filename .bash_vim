@@ -27,7 +27,7 @@ alias gitr="git remote add origin"
 alias gitp="git push"
 
 function gitcnf() {
-	dir = $PWD
+	dir=$PWD
 	cd ~/
 	git add .vimrc
 	git add .bash_vim	
