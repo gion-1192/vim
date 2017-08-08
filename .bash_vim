@@ -33,7 +33,6 @@ function gitcnf() {
 	git commit -m "$1 [`date "+%Y%m%d_%H%M%S"`]"
 	git push -u origin master
 }
-}
 alias gitcnf=gitcnf
 
 function mkcd(){
