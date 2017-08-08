@@ -27,11 +27,13 @@ alias gitr="git remote add origin"
 alias gitp="git push"
 
 function gitcnf() {
+	dir = $PWD
 	cd ~/
 	git add .vimrc
 	git add .bash_vim	
 	git commit -m "$1 [`date "+%Y%m%d_%H%M%S"`]"
 	git push -u origin master
+	cd dir
 }
 alias gitcnf=gitcnf
 
